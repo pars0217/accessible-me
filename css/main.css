@@ -1,29 +1,39 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #ccf0ff;
   margin: 0;
   padding: 0;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
 }
 
+h1 {
+  color: rgb(0, 179, 250);
+  text-align: center;
+  font-size: 50px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Container Styles*/
 .container {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+/*Image Styles*/
 img {
   width: 100%;
 }
 
+/*Navigation Styles*/
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -44,8 +54,27 @@ img {
   font-size: 1.25rem;
 }
 
-form input,
-form textarea {
+.centered-nav {
+  text-align: center;
+}
+
+.centered-nav ul{
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
+
+.centered-nav li{
+  display: inline;
+  margin: 0 15px;
+}
+
+.centered-nav a{
+  text-decoration: none;
+}
+
+/*form Styles*/
+form input, form textarea {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
@@ -68,4 +97,25 @@ form button {
 
 .site-footer {
   padding: 2rem 0;
+}
+
+/*Responsive layout*/
+@media screen and(min-width: 768px) {
+  .main-nav {
+    text-align: right;
+  }
+
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main-content > section {
+    flex: 1;
+    margin-left: 20px;
+  }
+
+  .contact-section {
+    flex-basis: 100%;
+  }
 }
